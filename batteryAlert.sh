@@ -6,6 +6,7 @@ ALERT_LOG="/home/wraith/log/battery_alerts.log" # Log file for alerts
 
 # Discord Webhook Configuration
 DISCORD_WEBHOOK_URL="" # <<< IMPORTANT: PASTE YOUR DISCORD WEBHOOK URL
+DISCORD_USER_ID=""
 DISCORD_USERNAME="Headless Server Battery Monitor" # Name displayed in Discord
 DISCORD_AVATAR_URL="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/battery-quarter.svg" # Optional: A simple battery icon
 
@@ -19,9 +20,9 @@ MESSAGE=""
 
 # Condition
 if (( BATTERY_PERCENTAGE <= 20)); then
-    MESSAGE="LOW BATTERY ALERT: Battery is at **${BATTERY_PERCENTAGE}%**! Please connect power soon."
+    MESSAGE="<@!${DISCORD_USER_ID} LOW BATTERY ALERT: Battery is at **${BATTERY_PERCENTAGE}%**! Please connect power soon."
 elif (( BATTERY_PERCENTAGE >= 80 )); then
-    MESSAGE="BATTERY ALERT: Battery is at **${BATTERY_PERCENTAGE}**! Disconnect the charger."
+    MESSAGE="<@!${DISCORD_USER_ID} BATTERY ALERT: Battery is at **${BATTERY_PERCENTAGE}**! Disconnect the charger."
 fi
 
 # Send Discord Notification

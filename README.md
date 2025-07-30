@@ -1,3 +1,3 @@
-- a simple bash script to msg me in discord when ever the battery level is below 20% or above 80%. 
-- for samsung j7 prime (on7xlte) G610F.
+- a simple bash script to msg me in discord whenever the battery level is below 20% or above 80%. 
+- for samsung j7 prime (on7xlte) G610F on postmarketos.
 - charge status reporting is not working so run this every hour
